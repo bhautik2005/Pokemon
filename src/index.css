@@ -1,0 +1,89 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -- Modern Dark Aurora Background -- */
+body {
+  background-color: #0f172a; /* bg-slate-900 */
+}
+
+.aurora-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.4;
+  background: 
+    radial-gradient(ellipse at 70% 20%, #4f46e5 0%, transparent 50%), 
+    radial-gradient(ellipse at 30% 80%, #06b6d4 0%, transparent 50%),
+    radial-gradient(ellipse at 90% 90%, #d946ef 0%, transparent 60%);
+  animation: aurora-glow 20s infinite alternate;
+}
+
+@keyframes aurora-glow {
+  from {
+    transform: scale(1) rotate(0deg);
+    filter: blur(40px);
+  }
+  to {
+    transform: scale(1.2) rotate(15deg);
+    filter: blur(60px);
+  }
+}
+
+/* -- 3D Card Styles -- */
+.card-3d {
+  transform-style: preserve-3d;
+  /* Hover effect will be handled by JS */
+}
+
+/* 
+The child elements inside the card can use `transform: translateZ(px)` 
+to create a layered, 3D effect. 
+*/
+
+/* -- Holographic Shine Effect -- */
+.card-shine {
+  /* The shine is a radial gradient that follows the mouse */
+  background: radial-gradient(
+    circle at var(--shine-x, 50%) var(--shine-y, 50%),
+    rgba(255, 255, 255, 0.4),
+    transparent 40%
+  );
+  mix-blend-mode: color-dodge;
+  pointer-events: none; /* Allows mouse events to pass through to the card */
+}
+
+.card-3d:hover .card-shine {
+  opacity: 1; /* Show the shine on hover */
+}
+
+/* -- Staggered Card Entry Animation -- */
+@keyframes card-entry {
+  from {
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.card-3d {
+  transform-style: preserve-3d;
+}
+
+@keyframes card-entry {
+  from {
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
