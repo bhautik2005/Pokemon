@@ -31,6 +31,7 @@ Component-Level Error Boundary: Each Pokémon card is wrapped in an ErrorBoundar
 
 Loading State: Shows a clean loading spinner while fetching the Pokémon data to inform the user of background activity.
 
+[!image](https://github.com/bhautik2005/Pokemon/blob/a99a796bb2623dea5d2e6c1415418639fba40dfe/Screenshot%202025-07-12%20105257-imageonline.co-merged.png)
 🛠️ Technologies Used
 
 React: A JavaScript library for building user interfaces.
