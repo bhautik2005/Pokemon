@@ -43,7 +43,7 @@ export default function main() {
   const [error, setError] = useState(null);
   const [search, setSearch] = useState('');
 
-  const API_URL = "https://pokeapi.co/api/v2/pokemon?limit=300";
+  const API_URL = "your pokemon api key with limits";
 
   const fetchPokemon = async () => {
     try {
