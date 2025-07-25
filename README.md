@@ -17,6 +17,8 @@ Responsive Design: A fully responsive grid layout that adapts to desktop, tablet
 
 Modern UI/UX:
 
+![image](https://github.com/bhautik2005/Pokemon/blob/99edf3f28401900f0d4e2217c1503a59e19e5f5e/Screenshot%202025-07-12%20105034-imageonline.co-merged.png)
+
 A beautiful dark theme with a subtle animated aurora background.
 
 Gradient text for the main heading.
